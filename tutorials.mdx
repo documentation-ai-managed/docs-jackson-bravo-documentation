@@ -1,0 +1,190 @@
+---
+title: Tutorials
+description: Step-by-step tutorials to help you master Jackson Bravo's design tools
+---
+
+## Getting Started Tutorials
+
+Welcome to Jackson Bravo! These tutorials will guide you through creating your first professional website. Whether you're new to web design or an experienced professional, our step-by-step guides will help you make the most of our platform.
+
+<Columns cols={2}>
+  <Card title="Beginner Guide" icon="book-open" href="#beginner">
+    Start here if you're new to Jackson Bravo.
+  </Card>
+  <Card title="Advanced Techniques" icon="zap" href="#advanced">
+    Master advanced features and workflows.
+  </Card>
+</Columns>
+
+## Tutorial 1: Creating Your First Portfolio
+
+Learn how to build a stunning portfolio website that showcases your design work effectively.
+
+<Steps>
+  <Step title="Choose a Template" icon="layout">
+    Select a portfolio template that matches your style. Browse our collection of designer-focused templates.
+    
+    <CodeGroup tabs="HTML,CSS">
+      ```html
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>My Design Portfolio</title>
+        <link rel="stylesheet" href="portfolio.css">
+      </head>
+      <body>
+        <nav class="navbar">
+          <div class="logo">Design Studio</div>
+          <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <section class="hero">
+          <h1>Creative Designer & Developer</h1>
+          <p>Crafting digital experiences that matter</p>
+        </section>
+      </body>
+      </html>
+      ```
+      ```css
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+      }
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Customize Your Design" icon="palette">
+    Personalize the template with your brand colors, fonts, and imagery.
+  </Step>
+  <Step title="Add Your Projects" icon="image">
+    Showcase your best work with high-quality images and detailed descriptions.
+  </Step>
+  <Step title="Optimize for Mobile" icon="smartphone">
+    Ensure your portfolio looks great on all devices.
+  </Step>
+  <Step title="Publish Your Site" icon="rocket">
+    Launch your portfolio and share it with the world.
+  </Step>
+</Steps>
+
+<Callout kind="info">Remember to include your contact information and social media links for easy client outreach.</Callout>
+
+## Tutorial 2: Working with Clients
+
+Discover best practices for collaborating with clients using Jackson Bravo's built-in tools.
+
+<Tabs>
+  <Tab title="Project Setup" icon="folder">
+    Create a new project and invite your client to collaborate.
+    
+    <ExpandableGroup>
+      <Expandable title="Client Access Levels" default-open="true">
+        Set appropriate permissions for client review and feedback.
+      </Expandable>
+      <Expandable title="Project Milestones" default-open="false">
+        Break down the project into manageable phases with clear deliverables.
+      </Expandable>
+    </ExpandableGroup>
+  </Tab>
+  <Tab title="Feedback Integration" icon="message-square">
+    Incorporate client feedback seamlessly into your design process.
+    
+    <Steps>
+      <Step title="Review Comments" icon="eye">
+        Check client feedback and annotations on your designs.
+      </Step>
+      <Step title="Implement Changes" icon="edit">
+        Make requested modifications using our editing tools.
+      </Step>
+      <Step title="Share Updates" icon="share">
+        Send updated designs for client approval.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Tutorial 3: Advanced Design Techniques
+
+Master advanced features to create more sophisticated and interactive websites.
+
+```javascript
+function createInteractiveGallery(images) {
+  const gallery = document.querySelector('.gallery');
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+  
+  images.forEach((image, index) => {
+    const img = document.createElement('img');
+    img.src = image.src;
+    img.alt = image.alt;
+    img.addEventListener('click', () => {
+      modal.innerHTML = `<img src="${image.src}" alt="${image.alt}">
+<button class="close">&times;</button>`;
+      document.body.appendChild(modal);
+      modal.style.display = 'block';
+    });
+    gallery.appendChild(img);
+  });
+  
+  // Close modal functionality
+  modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('close') || e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+}
+
+const portfolioImages = [
+  { src: 'project1.jpg', alt: 'Brand Identity Design' },
+  { src: 'project2.jpg', alt: 'Website Redesign' },
+  { src: 'project3.jpg', alt: 'Mobile App UI' }
+];
+
+createInteractiveGallery(portfolioImages);
+```
+
+<Callout kind="tip">Experiment with CSS animations and transitions to add subtle interactivity to your designs.</Callout>
+
+## Tutorial 4: SEO Optimization
+
+Learn how to optimize your Jackson Bravo websites for search engines to attract more visitors.
+
+<ExpandableGroup>
+  <Expandable title="Meta Tags" default-open="true">
+    Configure title tags, meta descriptions, and Open Graph data for better social sharing.
+  </Expandable>
+  <Expandable title="Content Structure" default-open="false">
+    Use proper heading hierarchy and semantic HTML for better crawlability.
+  </Expandable>
+  <Expandable title="Image Optimization" default-open="false">
+    Compress images and add descriptive alt text for improved accessibility and SEO.
+  </Expandable>
+</ExpandableGroup>
+
+## Resources and Support
+
+Continue learning with our extensive library of resources and community support.
+
+| Resource Type | Description | Access Method |
+|---------------|-------------|----------------|
+| Video Tutorials | Step-by-step video guides | Dashboard > Learning |
+| Documentation | Detailed feature explanations | Help Center |
+| Community Forum | Ask questions and share tips | Community Tab |
+| Live Support | Real-time assistance | Chat Widget |
+
+These tutorials provide a solid foundation for using Jackson Bravo effectively. As you gain experience, you'll discover new ways to leverage our tools for even more impressive results. Remember, practice and experimentation are key to mastering any design platform.
